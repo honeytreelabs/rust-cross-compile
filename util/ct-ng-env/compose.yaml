@@ -1,0 +1,9 @@
+---
+services:
+  debian:
+    build:
+      context: .
+      dockerfile: Dockerfile.debian
+    command: tail -f /dev/null
+    volumes:
+      - "${HOME}:/home/host_user"
