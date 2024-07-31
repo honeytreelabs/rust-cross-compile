@@ -4,9 +4,6 @@ services:
     build:
       context: .
       dockerfile: Dockerfile.debian
-      args:
-        USER_ID: "${LOCAL_USER_ID}"
-        GROUP_ID: "${LOCAL_GROUP_ID}"
     command: tail -f /dev/null
     volumes:
       - "${HOME}:/home/host_user"
